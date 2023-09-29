@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    body {
+      font-family: 'Red Hat Display', sans-serif;
+      background-image: url(./images/pattern-background-desktop.svg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: hsl(225, 100%, 94%);
+      flex-direction: column;
+    }
+
+    .container {
+      display: flex;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-bottom: 20px;
+      max-width: 375px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 1000;
+      font-size: 23px;
+      margin-top: 30px;
+      color: rgba(15, 15, 15, 0.836);
+    }
+
+    .order-text {
+      text-align: center;
+      width: 300px;
+      align-self: center;
+      font-size: 14px;
+      color: gray;
+      margin-top: 0%;
+    }
+
+    .order-photo {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    } 
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      margin-right: 15px;
+      align-self: center;
+    } 
+
+    .plan-price {
+      display: inline-flex;
+      flex-direction: row;  
+      max-height: 100px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .annual-container {
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+
+    h3 {
+      font-size: 12px;
+      font-weight: 900;
+      color: rgba(15, 15, 15, 0.836);
+      margin: 0;
+      padding: 0; 
+    }
+
+    .price {
+      font-size: 11px;
+      color: gray;   
+      margin: 0;
+      padding: 0; 
+    }
+
+   .change {
+      font-size: 12px;
+      color: hsl(245, 75%, 52%);
+      font-weight: 900;
+      align-self: center;
+      margin-left: 60px;
+   }
+
+    button {
+      width: 250px;
+      align-self: center;
+    }
+
+    .button-payment {
+      align-self: center;
+    }
+
+    button.order {
+      clear: both;
+      border: none;
+      padding: 12px;
+      color: gray;
+      border-radius: 10px;
+      font-weight: 700;
+      background-color: white;
+    }
+
+    button.payment {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+      border-radius: 10px;
+      padding: 12px;
+      border: none;
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: 30px;
+    }
+
+    .attribution {
+      flex-direction: column;
+      background-color: white;
+      align-self: center;
+      margin-bottom: 0px;
+      height: 10px;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .challenge {
+      font-style: italic;
+      margin-top: 5px;
+      align-self: center;
+      padding-top: 7px;
+      font-size: 9px;
+    }
+
+    span {
+      font-weight: 900;
+    }
+
+    @media (max-width: 375px) and (min-width: 300px) {
+      .container {
+        width: 80%;
+        flex-direction: column; 
+        align-self: center;
+        margin: auto;
+        justify-content: center;
+      }
+
+      footer {
+        justify-content: flex-end;
+        align-self: flex-end;
+      }
+     
+      .order-text {
+        font-size: 12px;
+        width: 200px;
+      }
+
+      button {
+        margin-left: 50px;
+        margin-right: 50px;
+        max-width: 230px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+      <img class="order-photo" src="./images/illustration-hero.svg" alt="girl dancing">
+      <h2>Order Summary</h2>
+      <p class="order-text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+      <div class="plan-price">
+        <img class="icon" src="./images/icon-music.svg" alt="music icon">
+        <div class="annual-container">
+          <h3>Annual Plan</h3> 
+          <p class="price">$59.99/year</p>
+        </div>
+        <a class="change" href="">Change</a>
+      </div> 
+    <button class="payment"> Proceed to Payment</button>
+    <button class="order">Cancel Order</button>
+  
+    <div class="attribution">
+      <p class="challenge">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> <span>Frontend Mentor</span></a>. 
+      Coded by <a href="https://github.com/mikaelazamudio"><span>Mikaela Zamudio</span></a>.</p>
+    </div>
+  </div>
+  </footer> 
+</body>
+</html>
